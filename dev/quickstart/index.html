@@ -44,15 +44,15 @@ end;</code></pre><p>Most ArviZ functions work fine with <code>Chains</code> obje
     dims = Dict(&quot;theta&quot; =&gt; [&quot;school&quot;], &quot;obs&quot; =&gt; [&quot;school&quot;])
 )</code></pre><pre><code class="language-none">InferenceData with groups:
 	&gt; posterior
-	&gt; sample_stats</code></pre><pre><code class="language-julia">plot_trace(data);</code></pre><p><img src="../quick_turingtrace.png" alt/></p><p>We can also generate summary stats</p><pre><code class="language-julia">summary(data)</code></pre><pre><code class="language-none">           mean     sd  hpd_3%  hpd_97%  ...  ess_sd  ess_bulk  ess_tail  r_hat
-theta[0]  6.494  5.542  -4.504   16.393  ...   696.0     600.0    1199.0   1.01
-theta[1]  5.196  4.845  -4.909   13.947  ...   461.0     434.0    1584.0   1.01
-theta[2]  4.267  5.375  -6.148   13.713  ...   531.0     478.0    1344.0   1.01
-theta[3]  5.005  4.865  -4.547   13.660  ...   621.0     574.0    1360.0   1.01
-theta[4]  3.910  4.879  -5.435   12.193  ...   349.0     350.0    1612.0   1.01
-theta[5]  4.229  4.943  -5.430   12.940  ...   469.0     439.0    1601.0   1.01
-theta[6]  6.658  5.062  -3.137   16.150  ...   550.0     505.0    1200.0   1.02
-theta[7]  5.138  5.297  -4.584   15.239  ...   740.0     690.0    1673.0   1.01
+	&gt; sample_stats</code></pre><pre><code class="language-julia">plot_trace(data);</code></pre><p><img src="../quick_turingtrace.png" alt/></p><p>We can also generate summary stats</p><pre><code class="language-julia">summarystats(data)</code></pre><pre><code class="language-none">           mean     sd  hpd_3%  hpd_97%  ...  ess_sd  ess_bulk  ess_tail  r_hat
+theta[1]  6.494  5.542  -4.504   16.393  ...   696.0     600.0    1199.0   1.01
+theta[2]  5.196  4.845  -4.909   13.947  ...   461.0     434.0    1584.0   1.01
+theta[3]  4.267  5.375  -6.148   13.713  ...   531.0     478.0    1344.0   1.01
+theta[4]  5.005  4.865  -4.547   13.660  ...   621.0     574.0    1360.0   1.01
+theta[5]  3.910  4.879  -5.435   12.193  ...   349.0     350.0    1612.0   1.01
+theta[6]  4.229  4.943  -5.430   12.940  ...   469.0     439.0    1601.0   1.01
+theta[7]  6.658  5.062  -3.137   16.150  ...   550.0     505.0    1200.0   1.02
+theta[8]  5.138  5.297  -4.584   15.239  ...   740.0     690.0    1673.0   1.01
 tau       3.750  3.267   0.324    9.552  ...   163.0      72.0      22.0   1.04
 mu        4.682  3.417  -2.392    9.958  ...   265.0     283.0     892.0   1.01
 
@@ -112,4 +112,4 @@ File /home/travis/build/arviz-devs/ArviZ.jl/docs/build/tmp/noname.stan will be u
 )</code></pre><pre><code class="language-none">InferenceData with groups:
 	&gt; posterior
 	&gt; posterior_predictive
-	&gt; sample_stats</code></pre><p>Here is a plot showing where the Hamiltonian sampler had divergences:</p><pre><code class="language-julia">plot_pair(data; coords = Dict(&quot;school&quot; =&gt; [&quot;Choate&quot;, &quot;Deerfield&quot;, &quot;Phillips Andover&quot;]), divergences = true);</code></pre><p><img src="../quick_cmdstanpair.png" alt/></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Home</a><a class="docs-footer-nextpage" href="../api/">API »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 15 November 2019 06:01">Friday 15 November 2019</span>. Using Julia version 1.2.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+	&gt; sample_stats</code></pre><p>Here is a plot showing where the Hamiltonian sampler had divergences:</p><pre><code class="language-julia">plot_pair(data; coords = Dict(&quot;school&quot; =&gt; [&quot;Choate&quot;, &quot;Deerfield&quot;, &quot;Phillips Andover&quot;]), divergences = true);</code></pre><p><img src="../quick_cmdstanpair.png" alt/></p></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Home</a><a class="docs-footer-nextpage" href="../api/">API »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Sunday 17 November 2019 10:50">Sunday 17 November 2019</span>. Using Julia version 1.2.0.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
